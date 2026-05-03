@@ -1,1 +1,4 @@
-
+Input Program:
+a = 12
+b = 9
+max = a > b ? a : b
