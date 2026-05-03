@@ -1,1 +1,65 @@
+DSL Compiler Simulation – Conditional Expression 
 
+1. Problem Understanding 
+This project simulates a simple Domain Specific Language (DSL) compiler that evaluates a conditional 
+expression using the ternary operator. 
+
+The DSL program: 
+  max = (a > b) ? a : b 
+
+is used to determine the maximum of two numbers. The goal is to demonstrate how a compiler processes 
+this statement through different phases such as lexical analysis, parsing, semantic analysis, and code 
+generation. 
+
+2. Input Program 
+a = 8 
+b = 5 
+max = a > b ? a : b 
+
+3. Compiler Phases 
+
+Lexical Analysis 
+• Identifies tokens: 
+o Identifiers → a, b, max 
+o Numbers → 8, 5 
+o Operators → > 
+o Conditional symbols → ?, : 
+
+Syntax Parsing 
+• Recognizes the structure: 
+max = (a > b) ? a : b 
+
+Semantic Analysis 
+• Checks: 
+o Variables are valid ✔ 
+o Data types are integers ✔ 
+o Condition is logically correct ✔ 
+
+Intermediate Code Generation 
+if a > b goto L1 
+t1 = b 
+goto L2 
+L1: t1 = a 
+L2: max = t1 
+
+4. Final Output 
+max = 8 
+
+5. Logic Used 
+• If a > b, assign a to max 
+• Otherwise, assign b to max 
+• Implemented using an if-else condition in C 
+
+
+6. Justification of Feature 
+The ternary conditional operator is chosen because: 
+• It represents real compiler decision-making 
+• Demonstrates branching logic 
+• Easy to simulate in compiler phases 
+• Commonly used in programming languages 
+
+Conclusion 
+This project demonstrates how a compiler evaluates conditional expressions step-by-step. It provides a 
+clear understanding of tokenization, parsing, semantic checking, and execution in a simplified manner.
+
+Done By, RA2311026050242 Tippluri Jahnavi Btech CSE AIML-D
